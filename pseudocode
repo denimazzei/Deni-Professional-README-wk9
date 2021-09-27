@@ -1,0 +1,38 @@
+Brainstorming / Pseudocode for Week 9 Homework: Professional README Generator
+TASK : Initialize project
+create index.js
+run npm init
+run npm i inquirer
+
+TASK : Create new repo with .gitignore file and include node_modules/ and .DS.Store/ 
+
+PSEUDO-CODE:
+const fs = require('fs');
+const inquirer = require('inquirer');
+  (Learn to use Inquirer Node package/API)
+Prompt user: Just use inquirer's .prompt() method
+Create prompts
+ Prompts:
+What is your name?
+Where are you from?
+What is your favorite hobby?
+What is your favorite food?
+Enter your GitHub Username:
+Enter your LinkedIn URL:
+What do we pass into the .prompt() method?
+Uses an array of objects that look like:
+{
+	type: ..., (probably just "input" for the most part)
+	message: ..., (this is the actual prompt displayed to the user)
+	name: ... (this can be anything we want... is used as the property name on the response object to retrieve the value that the user typed.)
+}
+Uses Promise .then(callbackFunction...);
+inquirer.prompt([{...}, {...},...]).then(response => {...});
+Maybe console.log successfully
+Create the HTML and incorporate user responses (from response object)
+probably using Template Literal syntax to build the HTML
+Write/output HTML file to the application root director (same folder that contains the .js)
+use the fs.writeFile(fileName, htmlString, (err) => {...}) method
+Need to write out Success message after successfully outputing HTML
+inside writeFile callback, verify that there was no error.
+Just use console.log() for this

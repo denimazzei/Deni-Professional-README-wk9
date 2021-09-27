@@ -1,0 +1,22 @@
+{
+  "name": "deni-professional-readme-wk9",
+  "version": "1.0.0",
+  "description": "README Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denimazzei/Deni-Professional-README-wk9.git"
+  },
+  "author": "Deni Mazzei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denimazzei/Deni-Professional-README-wk9/issues"
+  },
+  "homepage": "https://github.com/denimazzei/Deni-Professional-README-wk9#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
