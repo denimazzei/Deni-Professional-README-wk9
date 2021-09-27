@@ -1,7 +1,23 @@
+//packages needed for application
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-var inquirer = require("inquirer");
+const generateREADME = ({title, description, installation, usage, contributing, tests, license, username, email }) =>
+`README.md
+
+Title: ${title}
+Description: ${description}
+Table of Contents: 
+Installation: ${installation}
+Usage: ${usage}
+License: ${license}
+Contributing: ${contributing}
+Tests: ${tests}
+Questions: Have questions? Feel free to contact me at ${email}.
+`;
+
+//array of questions for user input
 inquirer
   .prompt([
       {
@@ -55,7 +71,12 @@ inquirer
         type: "input",
       },
   ])
+
+  .then((answers) => {
+    const readMeContent = generateREADME(answers);
+
+    fs.writeFile('README.md', readMeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md!')
+    );
+  });
   
-  .then((resp)) => {
-      
-  }
