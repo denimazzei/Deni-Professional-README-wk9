@@ -6,15 +6,23 @@ const inquirer = require('inquirer');
 const generateREADME = ({title, description, installation, usage, contributing, tests, license, username, email }) =>
 `README.md
 
-Title: ${title}
-Description: ${description}
-Table of Contents: 
-Installation: ${installation}
-Usage: ${usage}
-License: ${license}
-Contributing: ${contributing}
-Tests: ${tests}
-Questions: Have questions? Feel free to contact me at ${email}.
+# Repository Title: ${title}
+## Description: ${description}
+## Table of Contents: 
+1. [Repsitory Title] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#repository-name)
+2. [Description] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#repository-description)
+3. [Installation] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#installation)
+4. [Usage] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#usage)
+5. [License] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#license)
+6. [Contributing] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#contributing)
+7. [Tests] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#tests)
+8. [Questions] (https://github.com/${username}/${title}/blob/main/assets/js/README.md#questions)
+## Installation: ${installation}
+## Usage: ${usage}
+## License: ${license}
+## Contributing: ${contributing}
+## Tests: ${tests}
+## Questions: Have questions? Feel free to contact me at ${email}.
 `;
 
 //array of questions for user input
